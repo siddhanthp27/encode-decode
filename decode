@@ -1,0 +1,196 @@
+#!/bin/bash
+
+c=0
+for filename in *.txt.enc1
+do
+if [ ! -f "$filename" ]
+then
+c=$(($c+1))
+else
+echo "${filename}"
+sed -s 's/n/a/g
+s/o/b/g
+s/p/c/g
+s/q/d/g
+s/r/e/g
+s/s/f/g
+s/t/g/g
+s/u/h/g
+s/v/i/g
+s/w/j/g
+s/x/k/g
+s/y/l/g
+s/z/m/g
+s/A/n/g
+s/B/o/g
+s/C/p/g
+s/D/q/g
+s/E/r/g
+s/F/s/g
+s/G/t/g
+s/H/u/g
+s/I/v/g
+s/J/w/g
+s/K/x/g
+s/L/y/g
+s/M/z/g
+s/N/A/g
+s/O/B/g
+s/P/C/g
+s/Q/D/g
+s/R/E/g
+s/S/F/g
+s/T/G/g
+s/U/H/g
+s/V/I/g
+s/W/J/g
+s/X/K/g
+s/Y/L/g
+s/Z/M/g
+s/`1/N/g
+s/`2/O/g
+s/`3/P/g
+s/`4/Q/g
+s/`5/R/g
+s/`6/S/g
+s/`7/T/g
+s/`8/U/g
+s/`9/V/g
+s/`!/W/g
+s/`@/X/g
+s/`#/Y/g
+s/`$/Z/g' ${filename} >`echo "$filename" | cut -d"." -f 1,2`
+touch `echo "$filename" | cut -d"." -f 1,2`
+rm $filename
+fi
+done
+for filename in *.txt.enc2
+do
+if [ ! -f "$filename" ]
+then
+c=$(($c+1))
+else
+echo "${filename}"
+sed -s 's/o/a/g
+s/p/b/g
+s/q/c/g
+s/r/d/g
+s/s/e/g
+s/t/f/g
+s/u/g/g
+s/v/h/g
+s/w/i/g
+s/x/j/g
+s/y/k/g
+s/z/l/g
+s/n/m/g
+s/C/o/g
+s/D/p/g
+s/E/q/g
+s/F/r/g
+s/G/s/g
+s/H/t/g
+s/I/u/g
+s/J/v/g
+s/K/w/g
+s/L/x/g
+s/M/y/g
+s/A/z/g
+s/B/n/g
+s/Q/C/g
+s/R/D/g
+s/S/E/g
+s/T/F/g
+s/U/G/g
+s/V/H/g
+s/W/I/g
+s/X/J/g
+s/Y/K/g
+s/Z/L/g
+s/N/O/g
+s/P/B/g
+s/`1/Q/g
+s/`2/R/g
+s/`3/S/g
+s/`4/T/g
+s/`5/U/g
+s/`6/V/g
+s/`7/W/g
+s/`8/X/g
+s/`9/Y/g
+s/`!/Z/g
+s/`@/N/g
+s/`#/O/g
+s/`$/P/g
+s/`9/Y/g' ${filename} >`echo "$filename" | cut -d"." -f 1,2`
+touch `echo "$filename" | cut -d"." -f 1,2`
+rm $filename
+fi
+done
+for filename in *.txt.enc3
+do
+if [ ! -f "$filename" ]
+then
+c=$(($c+1))
+else
+echo "${filename}"
+sed -s 's/v/a/g
+s/w/b/g
+s/x/c/g
+s/y/d/g
+s/z/e/g
+s/n/f/g
+s/o/g/g
+s/p/h/g
+s/q/i/g
+s/r/j/g
+s/s/k/g
+s/t/l/g
+s/u/m/g
+s/E/v/g
+s/F/w/g
+s/G/x/g
+s/H/y/g
+s/I/z/g
+s/J/n/g
+s/K/o/g
+s/L/p/g
+s/M/q/g
+s/A/r/g
+s/B/s/g
+s/C/t/g
+s/D/u/g
+s/S/E/g
+s/T/F/g
+s/U/G/g
+s/V/H/g
+s/W/I/g
+s/X/J/g
+s/Y/K/g
+s/Z/L/g
+s/N/M/g
+s/O/A/g
+s/P/B/g
+s/Q/C/g
+s/R/D/g
+s/`5/S/g
+s/`6/T/g
+s/`7/U/g
+s/`8/V/g
+s/`9/W/g
+s/`!/X/g
+s/`@/Y/g
+s/`#/Z/g
+s/`$/N/g
+s/`1/O/g
+s/`2/P/g
+s/`3/Q/g
+s/`4/R/g' ${filename} >`echo "$filename" | cut -d"." -f 1,2`
+touch `echo "$filename" | cut -d"." -f 1,2`
+rm $filename
+fi
+done
+if [ $c == 3 ]
+then
+echo "No encrypted files found!"
+fi
